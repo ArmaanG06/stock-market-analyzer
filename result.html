@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Investment Analysis Result</h1>
+    <div class="result">
+        <p><strong>Ticker Symbol:</strong> {{ stock_data['ticker'] }}</p>
+        <p><strong>Company Name:</strong> {{ stock_data['company_name'] }}</p>
+        <p><strong>Current Price:</strong> ${{ stock_data['current_price'] }}</p>
+        <p><strong>Volume:</strong> {{ stock_data['volume'] }}</p>
+        <p><strong>Beta:</strong> {{ stock_data['beta'] }}</p>
+        <p><strong>P/E Ratio:</strong> {{ stock_data['pe_ratio'] }}</p>
+        <p><strong>5-Year Return Rate:</strong> {{ stock_data['five_year_avg_return'] }}%</p>
+        <p><strong>Assessment:</strong> {{ assessment }}</p>
+        <p><strong>Explanation:</strong> {{ explanation }}</p>
+        <button onclick="window.location.href='{{ url_for('index') }}'">Analyze Another Symbol</button>  
+</body>
+</html>

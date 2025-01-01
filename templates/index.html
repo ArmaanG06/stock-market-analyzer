@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Market Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Stock Market Analyzer</h1>
+    <form method ="post">
+        <label for="ticker">Ticker Symbol</label><br>
+        <input type="type" id="ticker" name="ticker" required><br><br>
+        
+        <label for="time_horizon">Time Horizon</label><br>
+        <select id="time_horizon" name="time_horizon" required>
+            <option value="Short-term">Short-term</option>
+            <option value="Medium-term">Medium-term</option>
+            <option value="Long-term">Long-term</option>
+        </select><br><br>
+
+        <label for="risk_tolerance">Risk Tolerance:</label><br>
+        <select id="risk_tolerance" name="risk_tolerance" required>
+            <option value="Low">Low</option>
+            <option value="Moderate">Moderate</option>
+            <option value="High">High</option>
+        </select><br><br>
+
+        <input type="submit" value="Analyze">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

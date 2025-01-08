@@ -38,7 +38,7 @@ Installation
 Clone the repository:
 
 
-git clone https://github.com/your-username/stock-analyzer.git
+git clone https://github.com/armaang06/stock-market-analyzer.git
 cd stock-analyzer
 Create a virtual environment (optional but recommended):
 
